@@ -67,23 +67,23 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Generated_970">
+  <Sequence sap2010:WorkflowViewState.IdRef="Generated_1390">
     <Sequence.Variables>
       <x:Reference>__ReferenceID0</x:Reference>
     </Sequence.Variables>
-    <upt:InterruptibleTriggerInitializer sap2010:WorkflowViewState.IdRef="Generated_841" />
-    <Parallel sap2010:WorkflowViewState.IdRef="Generated_852" CompletionCondition="[StopTriggersVariable]">
-      <Sequence sap2010:WorkflowViewState.IdRef="Generated_883">
+    <upt:InterruptibleTriggerInitializer sap2010:WorkflowViewState.IdRef="Generated_1261" />
+    <Parallel sap2010:WorkflowViewState.IdRef="Generated_1272" CompletionCondition="[StopTriggersVariable]">
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_1303">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Default="[&quot;0&quot;]" Name="BreakTriggerScopeVariableName" />
         </Sequence.Variables>
-        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_874" SchedulingMode="Sequential">
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_1294" SchedulingMode="Sequential">
           <ui:TriggerScope.Action>
             <ActivityAction x:TypeArguments="ufa:MessageTriggerEventArgs">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ufa:MessageTriggerEventArgs" Name="TriggerEventArgs" />
               </ActivityAction.Argument>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ClothesTrigger.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_866" UnSafe="False" WorkflowFileName="ClothesTrigger.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ClothesTrigger.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_1286" UnSafe="False" WorkflowFileName="ClothesTrigger.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="StopTriggersOutArgument">[StopTriggersVariable]</OutArgument>
                   <InArgument x:TypeArguments="ufa:MessageTriggerEventArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
@@ -99,17 +99,17 @@
           </ui:TriggerScope.Triggers>
         </ui:TriggerScope>
       </Sequence>
-      <Sequence sap2010:WorkflowViewState.IdRef="Generated_917">
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_1337">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Default="[&quot;0&quot;]" Name="BreakTriggerScopeVariableName" />
         </Sequence.Variables>
-        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_908" SchedulingMode="Sequential">
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_1328" SchedulingMode="Sequential">
           <ui:TriggerScope.Action>
             <ActivityAction x:TypeArguments="ufa:MessageTriggerEventArgs">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ufa:MessageTriggerEventArgs" Name="TriggerEventArgs" />
               </ActivityAction.Argument>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CosmeticsTrigger.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_8910" UnSafe="False" WorkflowFileName="CosmeticsTrigger.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CosmeticsTrigger.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_13110" UnSafe="False" WorkflowFileName="CosmeticsTrigger.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="StopTriggersOutArgument">[StopTriggersVariable]</OutArgument>
                   <InArgument x:TypeArguments="ufa:MessageTriggerEventArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
@@ -125,17 +125,17 @@
           </ui:TriggerScope.Triggers>
         </ui:TriggerScope>
       </Sequence>
-      <Sequence sap2010:WorkflowViewState.IdRef="Generated_9411">
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_13611">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Default="[&quot;0&quot;]" Name="BreakTriggerScopeVariableName" />
         </Sequence.Variables>
-        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_9312" SchedulingMode="Sequential">
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_13512" SchedulingMode="Sequential">
           <ui:TriggerScope.Action>
             <ActivityAction x:TypeArguments="ufa:MessageTriggerEventArgs">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ufa:MessageTriggerEventArgs" Name="TriggerEventArgs" />
               </ActivityAction.Argument>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ElectronicsTrigger.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_9214" UnSafe="False" WorkflowFileName="ElectronicsTrigger.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ElectronicsTrigger.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_13414" UnSafe="False" WorkflowFileName="ElectronicsTrigger.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="StopTriggersOutArgument">[StopTriggersVariable]</OutArgument>
                   <InArgument x:TypeArguments="ufa:MessageTriggerEventArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
@@ -151,8 +151,8 @@
           </ui:TriggerScope.Triggers>
         </ui:TriggerScope>
       </Sequence>
-      <Sequence sap2010:WorkflowViewState.IdRef="Generated_9515">
-        <ui:ListenForStopTriggers sap2010:WorkflowViewState.IdRef="Generated_9616" />
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_13715">
+        <ui:ListenForStopTriggers sap2010:WorkflowViewState.IdRef="Generated_13816" />
         <Assign x:TypeArguments="x:Boolean" Value="True">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Boolean">

@@ -101,7 +101,7 @@
           if (
             val.ProductName != undefined &&
             val.Url != undefined &&
-            val.ProductAmount != undefined
+            val.productAmount != undefined
           ) {
             html += `<tr class="price"><td><input type="checkbox" name="checkbox"></td>`;
             Object.values(val).forEach((value) => {
@@ -129,7 +129,7 @@
             i = i + 3;
           }
           amountDisplay.innerText = price;
-          console.log(price);
+          // console.log(price);
         });
       })();
     </script>
