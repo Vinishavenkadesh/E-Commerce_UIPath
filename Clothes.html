@@ -1,0 +1,177 @@
+﻿<!-- form
+{
+  "Metadata": {
+    "Id": "94e0bf8e-66f5-45a4-8b47-757fae1d060c",
+    "Kind": "Html"
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS for styling -->
+    <style>
+      body {
+        background-image: url("electronics.jpg"); /* Replace 'electronics.jpg' with your image file path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .container {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Add a transparent white background to the container */
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 50px;
+      }
+      /* Add CSS for the table */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Clothes List</h1>
+      <form>
+        <div class="table"></div>
+      </form>
+      <button
+        type="submit"
+        id="submit"
+        onclick="okClicked()"
+        class="btn btn-success"
+      >
+        Submit
+      </button>
+      <h5 id="amountDisplay"></h5>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+      integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let table = document.querySelector(".table");
+      (async () => {
+        let workbook = XLSX.read(
+          await (await fetch("./ProductList.xlsx")).arrayBuffer()
+        );
+
+        let sheetName = "Clothes";
+
+        let data = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
+
+        let html = `<h3>${name}</h3><table><tr><th></th>`;
+
+        const topic = ["Product", "URL", "ProductAmount"];
+
+        topic.forEach((key) => {
+          html += `<th>${key}</th>`;
+        });
+        html += `</tr>`;
+
+        data.forEach((val, index) => {
+          console.log(val);
+          if (
+            val.ProductName != undefined &&
+            val.Url != undefined &&
+            val.ProductAmount != undefined
+          ) {
+            html += `<tr class="price"><td><input type="checkbox" name="checkbox"></td>`;
+            Object.values(val).forEach((value) => {
+              html += `<td>${value}</td>`;
+            });
+            html += `</tr>`;
+          }
+        });
+        html += `</table>`;
+        table.innerHTML += html;
+
+        let list = document.getElementsByClassName("price");
+        let submit = document.getElementById("submit");
+        let amountDisplay = document.getElementById("amountDisplay");
+        let td = document.querySelectorAll("td");
+
+        submit.addEventListener("click", () => {
+          let price = 0;
+          for (var i = 0; i < td.length; i++) {
+            if (td[i].childNodes[0].checked) {
+              let amount = td[i].parentElement.lastChild.innerText;
+              value = parseInt(amount.replace(/,/g, ""));
+              price += value;
+            }
+            i = i + 3;
+          }
+          amountDisplay.innerText = price;
+          console.log(price);
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      var uiPathApi = {
+        getValue: function (elementId) {
+          var el = document.getElementById(elementId);
+          if (el.value == undefined) {
+            return el.innerHTML;
+          } else {
+            if (el.checked == undefined) {
+              return el.value;
+            } else {
+              return el.checked;
+            }
+          }
+        },
+
+        setValue: function (elementId, value) {
+          var el = document.getElementById(elementId);
+          if (el.value == undefined) {
+            el.innerHTML = value;
+          } else {
+            if (el.checked == undefined) {
+              el.value = value;
+            } else {
+              el.checked = value;
+            }
+          }
+        },
+
+        sendMessage: function (id, value) {},
+      };
+    </script>
+    <script>
+      function okClicked() {
+        uiPathApi.sendMessage("ok clicked");
+      }
+
+      function cancelClicked() {
+        uiPathApi.sendMessage("cancel clicked");
+      }
+    </script>
+  </body>
+</html>

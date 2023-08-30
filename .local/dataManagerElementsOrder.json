@@ -1,0 +1,110 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CustomerChoice&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FlowChart.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CustomerChoice&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UpdatingElectronics.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ReadData&Sequence_11",
+        "SetData&Sequence_11",
+        "ExtractDataTable&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Electronics.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "amount&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ElectronicsTrigger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "amount&Sequence_1",
+        "TransactionID&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ElectronicsUpdate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_7",
+        "SetData&Sequence_11",
+        "ReadData&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CosmeticsUpdate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Cosmetics.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CosmeticsTrigger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionID&Sequence_1",
+        "amount&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
