@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>944,1359</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,1511</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ElectronicsTrigger_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -88,24 +88,30 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ElectronicsTrigger" sap:VirtualizedContainerService.HintSize="450,1294" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ElectronicsTrigger" sap:VirtualizedContainerService.HintSize="450,1446" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="amount" />
       <Variable x:TypeArguments="x:String" Name="TransactionID" />
+      <Variable x:TypeArguments="x:String" Name="value" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:FormTriggerActivity x:TypeArguments="ufa:MessageTriggerEventArgs" Tag="{x:Null}" DisplayName="Form Event Trigger" Enabled="True" Event="form.message" FormId="c2aacd72-e5c7-47d5-9cb3-3126566d0a5d" sap:VirtualizedContainerService.HintSize="388,210" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" MessageId="ok clicked" SchedulingMode="Sequential" TriggerId="bad70c23-6e3c-4339-8d62-e8db6169b2de" />
-    <ufa:GetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Get Form Values" FormId="c2aacd72-e5c7-47d5-9cb3-3126566d0a5d" sap:VirtualizedContainerService.HintSize="388,140" sap2010:WorkflowViewState.IdRef="GetFormFieldsActivity_1">
+    <ufa:FormTriggerActivity x:TypeArguments="ufa:MessageTriggerEventArgs" Tag="{x:Null}" DisplayName="Form Event Trigger" Enabled="True" Event="form.message" FormId="c2aacd72-e5c7-47d5-9cb3-3126566d0a5d" sap:VirtualizedContainerService.HintSize="388,209" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" MessageId="ok clicked" SchedulingMode="Sequential" TriggerId="bad70c23-6e3c-4339-8d62-e8db6169b2de" />
+    <ufa:GetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Get Form Values" FormId="5ad77732-ee4e-4974-969a-52b14568d349" sap:VirtualizedContainerService.HintSize="388,140" sap2010:WorkflowViewState.IdRef="GetFormFieldsActivity_1">
       <ufa:GetFormFieldsActivity.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="amountDisplay">[amount]</OutArgument>
       </ufa:GetFormFieldsActivity.Arguments>
     </ufa:GetFormFieldsActivity>
     <ui:StopTriggers DisplayName="Stop Local Triggers" sap:VirtualizedContainerService.HintSize="388,95" sap2010:WorkflowViewState.IdRef="StopTriggers_1" ShouldStop="[StopTriggersOutArgument]" />
-    <ufa:CloseFormActivity InstanceName="{x:Null}" DisplayName="Close Form" FormId="c2aacd72-e5c7-47d5-9cb3-3126566d0a5d" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="CloseFormActivity_1" />
+    <ufa:CloseFormActivity InstanceName="{x:Null}" DisplayName="Close Form" FormId="5ad77732-ee4e-4974-969a-52b14568d349" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="CloseFormActivity_1" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EmailValidate.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="D:\UIPath\E-CommerceApplication\EmailValidate.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Your total amount : &quot; + amount]" />
     <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter the Transaction ID : " Title="Transaction ID">
       <ui:InputDialog.Result>

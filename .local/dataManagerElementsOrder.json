@@ -76,16 +76,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "CosmeticsUpdate.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "ExtractDataTable&Sequence_14"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Cosmetics.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
@@ -97,12 +87,65 @@
       "Path": "CosmeticsTrigger.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "email&Sequence_1",
         "TransactionID&Sequence_1",
         "amount&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "TriggerEventArgs"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Clothes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ClothesTrigger.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionID&Sequence_1",
+        "amount&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TriggerEventArgs"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CosmeticsUpdate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ClothesUpdate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "EmailValidate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "password&Sequence_1",
+        "email&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
